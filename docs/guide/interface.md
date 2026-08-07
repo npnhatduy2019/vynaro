@@ -1,37 +1,38 @@
----
-title: 界面与功能指南
-description: Vynaro 桌面端界面各区域、7 步卡片流水线与工具栏完整说明。
----
+# Làm quen giao diện
 
-# 🖥️ 界面与功能指南
+## Thanh điều hướng
 
-Vynaro 采用 **Tauri 2 + Rust + React 19** 深度研发，提供直观的暗黑影院级桌面端界面，将复杂的 AI 视频解说与短剧剪辑流程拆解为 7 步标准化卡片流水线。
+Thanh bên trái cung cấp các khu vực chính:
 
----
+- **Bảng điều khiển:** tổng quan và dự án gần đây.
+- **Quy trình sản xuất:** không gian làm việc 7 bước.
+- **Dự án & tài nguyên:** quản lý video, âm thanh, kịch bản và bản xuất.
+- **Mô hình AI & công cụ:** cấu hình LLM, TTS, FFmpeg, giao diện và ngôn ngữ.
+- **Trung tâm trợ giúp:** hướng dẫn, phím tắt và xử lý sự cố.
 
-## 🎨 界面全景交互视窗
+## Thanh trên cùng
 
-<HeroAppShowcase />
+Thanh trên cùng hiển thị tìm kiếm lệnh, trạng thái kết nối, trợ giúp và thông tin ứng dụng. Dùng `Ctrl/Command + K` để mở bảng lệnh nhanh.
 
----
+## Bảng điều khiển
 
-## ✂️ 7 步全自动化流水线与界面特写
+Trang đầu hiển thị dự án gần đây, trạng thái quy trình và các thao tác thường dùng. Đây là nơi phù hợp để tạo dự án hoặc quay lại công việc đang dang dở.
 
-<InteractivePipeline />
+## Trung tâm dự án
 
----
+Mỗi dự án gom tài nguyên đầu vào, kịch bản, âm thanh, phụ đề và kết quả xuất. Nên đặt tên dự án rõ ràng và không di chuyển thư mục nguồn khi quy trình đang chạy.
 
-## 📱 8 大平台导出预设说明
+## Không gian sản xuất
 
-<PlatformPresetSelector />
+Bảy bước được trình bày theo thứ tự. Mỗi bước có trạng thái chờ, đang chạy, hoàn thành hoặc lỗi. Hãy kiểm tra đầu ra của từng bước trước khi chuyển sang bước tiếp theo.
 
----
+## Cài đặt
 
-## ⚙️ 系统快捷键指南
+Các tab cài đặt gồm:
 
-| 快捷键 (macOS / Win) | 功能描述 |
-| :--- | :--- |
-| <kbd>Cmd</kbd> / <kbd>Ctrl</kbd> + <kbd>N</kbd> | 创建新的短剧解说工程 |
-| <kbd>Cmd</kbd> / <kbd>Ctrl</kbd> + <kbd>I</kbd> | 导入本地视频素材片段 |
-| <kbd>Space</kbd> | 播放 / 暂停视频预览 |
-| <kbd>Cmd</kbd> / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> | 快捷弹出【导出与剪映草稿】视窗 |
+1. Mô hình ngôn ngữ.
+2. Tổng hợp giọng nói.
+3. FFmpeg và môi trường hệ thống.
+4. Giao diện, chủ đề và ngôn ngữ.
+
+Bản Việt hóa sử dụng `vi-VN` làm ngôn ngữ mặc định nhưng vẫn cho phép chuyển sang tiếng Anh hoặc tiếng Trung giản thể.

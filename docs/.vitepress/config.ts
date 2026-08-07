@@ -1,48 +1,47 @@
 import { defineConfig } from "vitepress";
 
-// 单一来源 sidebar：全站统一五大分类，nav 与之一一对应，避免重复与漂移。
 const SIDEBAR = [
   {
-    text: "开始使用",
+    text: "Bắt đầu",
     collapsed: false,
     items: [
-      { text: "快速开始", link: "/guide/quick-start" },
-      { text: "安装指南", link: "/guide/installation" },
-      { text: "AI 配置", link: "/guide/ai-configuration" },
-      { text: "界面说明", link: "/guide/interface" },
+      { text: "Bắt đầu nhanh", link: "/guide/quick-start" },
+      { text: "Cài đặt", link: "/guide/installation" },
+      { text: "Cấu hình AI", link: "/guide/ai-configuration" },
+      { text: "Làm quen giao diện", link: "/guide/interface" },
     ],
   },
   {
-    text: "生产流程",
+    text: "Quy trình sản xuất",
     collapsed: false,
     items: [
-      { text: "第一人称生产规范", link: "/guide/narration-spec" },
-      { text: "AI 工作流详解", link: "/guide/ai-video-guide" },
-      { text: "导出发布", link: "/guide/exporting" },
+      { text: "Tiêu chuẩn thuyết minh", link: "/guide/narration-spec" },
+      { text: "Quy trình video AI", link: "/guide/ai-video-guide" },
+      { text: "Xuất và phát hành", link: "/guide/exporting" },
     ],
   },
   {
-    text: "帮助",
+    text: "Hỗ trợ",
     collapsed: false,
-    items: [{ text: "疑难排查", link: "/guide/troubleshooting" }],
+    items: [
+      { text: "Khắc phục sự cố", link: "/guide/troubleshooting" },
+      { text: "Quy trình phát hành", link: "/guide/release-process" },
+    ],
   },
 ];
 
 export default defineConfig({
   title: "Vynaro",
   description:
-    "Vynaro 第一人称影视/短剧解说生产文档，覆盖素材、脚本、配音、字幕、导出和发布复盘。",
+    "Tài liệu tiếng Việt cho Vynaro — ứng dụng AI desktop tạo video kể chuyện và thuyết minh theo quy trình 7 bước.",
   base: "/vynaro/",
-  lang: "zh-CN",
+  lang: "vi-VN",
   cleanUrls: false,
-  // 默认深色主题，保留手动切换。
   appearance: "dark",
-  // 死链作为构建错误（此前被 true 掩盖）。新增页面/链接若拼错会在 CI 暴露。
   ignoreDeadLinks: false,
   lastUpdated: true,
 
   head: [
-    // Google Fonts: Outfit, Inter, JetBrains Mono
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" }],
     [
@@ -52,41 +51,29 @@ export default defineConfig({
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800;900&display=swap",
       },
     ],
-
-    // Favicon (新品牌: SVG 主, PNG 备)
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
-    [
-      "link",
-      { rel: "alternate icon", type: "image/png", href: "/favicon.png" },
-    ],
-
-    // SEO
+    ["link", { rel: "alternate icon", type: "image/png", href: "/favicon.png" }],
     [
       "meta",
       {
         name: "keywords",
         content:
-          "短剧解说,第一人称解说,影视解说,AI脚本,自动配音,AI字幕,竖屏导出,Vynaro",
+          "Vynaro, video AI, thuyết minh phim, kịch bản AI, giọng đọc TTS, phụ đề tự động, CapCut",
       },
     ],
-    ["meta", { name: "author", content: "Agions" }],
+    ["meta", { name: "author", content: "Vynaro contributors" }],
     ["meta", { name: "robots", content: "index, follow" }],
-
-    // Open Graph
     ["meta", { property: "og:type", content: "website" }],
     [
       "meta",
-      {
-        property: "og:title",
-        content: "Vynaro 文档中心 — 第一人称影视解说生产流程",
-      },
+      { property: "og:title", content: "Vynaro — Tài liệu tiếng Việt" },
     ],
     [
       "meta",
       {
         property: "og:description",
         content:
-          "面向短剧和影视解说团队的标准化生产文档：素材、脚本、配音、字幕、导出和发布复盘。",
+          "Hướng dẫn cài đặt, cấu hình và vận hành quy trình tạo video AI 7 bước bằng Vynaro.",
       },
     ],
     [
@@ -96,20 +83,15 @@ export default defineConfig({
         content: "https://agions.github.io/vynaro/og-image.png",
       },
     ],
-    [
-      "meta",
-      { property: "og:url", content: "https://agions.github.io/vynaro/" },
-    ],
+    ["meta", { property: "og:url", content: "https://agions.github.io/vynaro/" }],
     ["meta", { property: "og:site_name", content: "Vynaro" }],
-
-    // Twitter / X
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
-    ["meta", { name: "twitter:title", content: "Vynaro 文档中心" }],
+    ["meta", { name: "twitter:title", content: "Vynaro — Tài liệu tiếng Việt" }],
     [
       "meta",
       {
         name: "twitter:description",
-        content: "第一人称影视/短剧解说标准化生产流程。",
+        content: "Tài liệu vận hành Vynaro dành cho người dùng Việt Nam.",
       },
     ],
     [
@@ -119,124 +101,91 @@ export default defineConfig({
         content: "https://agions.github.io/vynaro/og-image.png",
       },
     ],
-
-    // Theme
     ["meta", { name: "theme-color", content: "#111210" }],
     ["meta", { name: "color-scheme", content: "dark" }],
   ],
 
   markdown: {
     lineNumbers: false,
-    theme: {
-      light: "github-light",
-      dark: "github-dark",
-    },
+    theme: { light: "github-light", dark: "github-dark" },
     container: {
-      tipLabel: "💡 提示",
-      warningLabel: "⚠️ 注意",
-      dangerLabel: "🚨 危险",
-      infoLabel: "ℹ️ 信息",
-      detailsLabel: "详情",
+      tipLabel: "💡 Mẹo",
+      warningLabel: "⚠️ Lưu ý",
+      dangerLabel: "🚨 Nguy hiểm",
+      infoLabel: "ℹ️ Thông tin",
+      detailsLabel: "Chi tiết",
     },
   },
 
   themeConfig: {
-    // ── Logo & Site Title ──────────────────────────────────
-    // VitePress logo 字段类型 ThemeableImage，用 { light, dark } 平铺结构，
-    // 让 logo 随主题自动切换。
     logo: {
       dark: "/logo.svg",
       light: "/logo-light.svg",
       alt: "Vynaro",
     },
     siteTitle: "Vynaro",
-
-    // ── Last Updated ────────────────────────────────────────
     lastUpdated: {
-      text: "最后更新",
-      formatOptions: {
-        dateStyle: "medium",
-        timeStyle: "short",
-      },
+      text: "Cập nhật lần cuối",
+      formatOptions: { dateStyle: "medium", timeStyle: "short" },
     },
-
-    // ── Search ──────────────────────────────────────────────
     search: {
       provider: "local",
       options: {
         translations: {
           button: {
-            buttonText: "搜索",
-            buttonAriaLabel: "搜索文档",
+            buttonText: "Tìm kiếm",
+            buttonAriaLabel: "Tìm trong tài liệu",
           },
           modal: {
-            noResultsText: "未找到结果",
-            resetButtonTitle: "清除搜索",
+            noResultsText: "Không tìm thấy kết quả",
+            resetButtonTitle: "Xóa tìm kiếm",
           },
         },
       },
     },
-
-    // ── Navigation（与 sidebar 一一对应，5 个一级分类）────────
     nav: [
-      { text: "首页", link: "/" },
+      { text: "Trang chủ", link: "/" },
       {
-        text: "开始使用",
+        text: "Bắt đầu",
         items: [
-          { text: "快速开始", link: "/guide/quick-start" },
-          { text: "安装指南", link: "/guide/installation" },
-          { text: "AI 配置", link: "/guide/ai-configuration" },
-          { text: "界面说明", link: "/guide/interface" },
+          { text: "Bắt đầu nhanh", link: "/guide/quick-start" },
+          { text: "Cài đặt", link: "/guide/installation" },
+          { text: "Cấu hình AI", link: "/guide/ai-configuration" },
+          { text: "Giao diện", link: "/guide/interface" },
         ],
       },
       {
-        text: "生产流程",
+        text: "Sản xuất",
         items: [
-          { text: "第一人称生产规范", link: "/guide/narration-spec" },
-          { text: "AI 工作流详解", link: "/guide/ai-video-guide" },
-          { text: "导出发布", link: "/guide/exporting" },
+          { text: "Tiêu chuẩn thuyết minh", link: "/guide/narration-spec" },
+          { text: "Quy trình video AI", link: "/guide/ai-video-guide" },
+          { text: "Xuất bản", link: "/guide/exporting" },
         ],
       },
       {
-        text: "帮助",
-        items: [{ text: "疑难排查", link: "/guide/troubleshooting" }],
+        text: "Hỗ trợ",
+        items: [
+          { text: "Khắc phục sự cố", link: "/guide/troubleshooting" },
+          { text: "Quy trình phát hành", link: "/guide/release-process" },
+        ],
       },
     ],
-
-    // ── Sidebar（单一来源，五大分类全站统一）──────────────────
     sidebar: SIDEBAR,
-
-    // ── Table of Contents ──────────────────────────────────
-    outline: {
-      level: [2, 3],
-      label: "目录",
-    },
-
-    // ── Doc Footer (prev/next) ──────────────────────────────
-    docFooter: {
-      prev: "上一篇",
-      next: "下一篇",
-    },
-
-    // ── Footer ──────────────────────────────────────────────
+    outline: { level: [2, 3], label: "Mục lục" },
+    docFooter: { prev: "Trang trước", next: "Trang tiếp theo" },
     footer: {
-      message: "Vynaro 文档中心 · 面向影视/短剧第一人称解说生产",
-      copyright: "Copyright © 2025-2026 Agions · 隐私优先 · 本地处理",
+      message: "Vynaro · Studio AI tạo video kể chuyện và thuyết minh",
+      copyright: "Phát hành theo giấy phép MIT · Ưu tiên xử lý cục bộ",
     },
-
-    // ── Return to Top ────────────────────────────────────────
-    returnToTopLabel: "返回顶部",
-    sidebarMenuLabel: "菜单",
-
-    // ── Not Found (404) ────────────────────────────────────
+    returnToTopLabel: "Về đầu trang",
+    sidebarMenuLabel: "Menu",
     notFound: {
-      title: "页面未找到",
-      quote: "你来到了一片空白的领域。",
-      linkText: "返回首页",
+      title: "Không tìm thấy trang",
+      quote: "Đường dẫn này không tồn tại hoặc đã được di chuyển.",
+      linkText: "Quay về trang chủ",
     },
   },
 
-  // ── Sitemap ────────────────────────────────────────────────
   sitemap: {
     hostname: "https://agions.github.io/vynaro/",
     lastmodDateOnly: true,
