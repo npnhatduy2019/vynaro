@@ -1,45 +1,41 @@
 ---
-name: 🐛 Bug 报告 / Bug Report
-about: 报告一个问题帮助我们改进 / Report a bug to help us improve
-title: "[Bug] "
-labels: bug
-assignees: ""
+name: Báo lỗi
+description: Báo cáo lỗi có thể tái hiện trong Vynaro
+title: "[Lỗi] "
+labels: ["bug"]
+body: ""
 ---
 
-## 🐛 问题描述 / Bug Description
+## Mô tả lỗi
 
-<!-- 清晰简洁地描述这个 bug / A clear and concise description of the bug -->
+Mô tả ngắn gọn và rõ ràng điều đã xảy ra.
 
-## 🔄 复现步骤 / Steps to Reproduce
+## Các bước tái hiện
 
-1. 进入 '...'
-2. 点击 '...'
-3. 看到错误 '...'
+1. Mở...
+2. Chọn...
+3. Chạy...
+4. Quan sát lỗi...
 
-## ✅ 期望行为 / Expected Behavior
+## Kết quả mong đợi
 
-<!-- 描述你期望发生什么 / What you expected to happen -->
+Điều gì đáng lẽ phải xảy ra?
 
-## ❌ 实际行为 / Actual Behavior
+## Kết quả thực tế
 
-<!-- 描述实际发生了什么 / What actually happened -->
+Điều gì đã xảy ra thay thế?
 
-## 📸 截图 / Screenshots
+## Môi trường
 
-<!-- 如果有截图，请粘贴在这里 / If applicable, add screenshots -->
+- Hệ điều hành:
+- Phiên bản Vynaro:
+- Phiên bản FFmpeg:
+- Nhà cung cấp AI/TTS liên quan:
 
-## 🖥️ 环境信息 / Environment
+## Log hoặc ảnh chụp
 
-- OS: [e.g. macOS 14.0 / Windows 11 / Ubuntu 22.04]
-- Vynaro 版本 / Version: [e.g. 2.5.0]
-- 使用的 AI 模型 / AI Model: [e.g. Kimi K3 / DeepSeek-V4]
+Dán log hoặc ảnh chụp cần thiết. Hãy xóa API Key, đường dẫn riêng tư và dữ liệu cá nhân trước khi gửi.
 
-## 📋 错误日志 / Error Logs
+## Thông tin bổ sung
 
-```
-粘贴错误日志 / Paste error logs here
-```
-
-## 📝 补充信息 / Additional Context
-
-<!-- 其他任何有助于理解问题的信息 / Any other context about the problem -->
+Bất kỳ thông tin nào khác có thể giúp tái hiện và sửa lỗi.
