@@ -1,22 +1,19 @@
 /**
- * Vynaro v1.0.0 · settings store (Zustand)
+ * Vynaro · settings store (Zustand)
  *
- * 设计:
- * - 仅持久化非敏感设置(主题/语言/默认值)
- * - LLM/TTS API 密钥不放在这里,经 secure-key-manager (keyring/credential manager) 存储
- *
- * M3.3 接入 invoke settings.get / settings.set 后填充
+ * Only non-sensitive preferences are persisted here. API keys remain in the
+ * secure key manager / credential store.
  */
 
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { LlmProviderKind, TtsProviderKind } from "../ipc/types.gen";
+import type { Locale } from "../lib/i18n";
 
 interface SettingsState {
-  locale: string;
+  locale: Locale;
   llmDefaultProvider: LlmProviderKind;
   ttsDefaultProvider: TtsProviderKind;
-  /** 自动保存间隔(秒) */
   autoSaveIntervalSec: number;
   setLocale: (locale: string) => void;
   setLlmDefault: (provider: LlmProviderKind) => void;
@@ -24,14 +21,20 @@ interface SettingsState {
   setAutoSaveInterval: (sec: number) => void;
 }
 
+function asLocale(locale: string): Locale {
+  if (locale === "vi-VN" || locale.startsWith("vi")) return "vi-VN";
+  if (locale === "en-US" || locale.startsWith("en")) return "en-US";
+  return "zh-CN";
+}
+
 export const useSettingsStore = create<SettingsState>()(
   persist(
     (set) => ({
-      locale: "zh-CN",
+      locale: "vi-VN",
       llmDefaultProvider: "open-ai",
       ttsDefaultProvider: "edge",
       autoSaveIntervalSec: 60,
-      setLocale: (locale) => set({ locale }),
+      setLocale: (locale) => set({ locale: asLocale(locale) }),
       setLlmDefault: (provider) => set({ llmDefaultProvider: provider }),
       setTtsDefault: (provider) => set({ ttsDefaultProvider: provider }),
       setAutoSaveInterval: (sec) => set({ autoSaveIntervalSec: sec }),
