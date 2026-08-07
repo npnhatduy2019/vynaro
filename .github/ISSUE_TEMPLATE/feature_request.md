@@ -1,32 +1,30 @@
 ---
-name: 💡 功能建议 / Feature Request
-about: 为这个项目提出新想法 / Suggest an idea for this project
-title: '[Feature] '
-labels: enhancement
-assignees: ''
+name: Đề xuất tính năng
+description: Đề xuất cải tiến hoặc chức năng mới cho Vynaro
+title: "[Đề xuất] "
+labels: ["enhancement"]
+body: ""
 ---
 
-## 💡 功能描述 / Feature Description
+## Vấn đề cần giải quyết
 
-<!-- 清晰简洁地描述你想要的功能 / A clear and concise description of what you want -->
+Mô tả nhu cầu hoặc khó khăn hiện tại. Ai gặp vấn đề này và trong tình huống nào?
 
-## 🤔 解决的问题 / Problem It Solves
+## Giải pháp đề xuất
 
-<!-- 这个功能解决了什么问题？/ What problem does this feature solve? -->
-<!-- 例如：当我... 时，我总是感到沮丧 / e.g. I'm always frustrated when... -->
+Mô tả hành vi mong muốn, luồng thao tác và kết quả đầu ra.
 
-## 💭 建议的解决方案 / Proposed Solution
+## Phương án khác đã cân nhắc
 
-<!-- 描述你希望如何实现这个功能 / Describe the solution you'd like -->
+Có cách nào khác để giải quyết vấn đề không? Vì sao phương án đề xuất phù hợp hơn?
 
-## 🔄 替代方案 / Alternatives Considered
+## Phạm vi ảnh hưởng
 
-<!-- 你考虑过哪些替代方案？/ Any alternative solutions you've considered? -->
+- Khu vực giao diện hoặc mô-đun liên quan:
+- Có thay đổi định dạng dự án hay không:
+- Có yêu cầu dịch thuật/i18n hay không:
+- Có ảnh hưởng tới quyền riêng tư hoặc dữ liệu người dùng hay không:
 
-## 📸 参考截图/链接 / References
+## Ví dụ hoặc hình minh họa
 
-<!-- 有没有类似功能的参考？/ Any references or similar features? -->
-
-## 📝 补充信息 / Additional Context
-
-<!-- 其他任何有助于理解需求的信息 / Any other context about the feature request -->
+Đính kèm bản phác thảo, ảnh hoặc ví dụ đầu vào/đầu ra nếu có.
