@@ -1,4 +1,4 @@
-//! vynaro-core · i18n — 后端多语言翻译工具
+//! vynaro-core · i18n — backend locale support
 
 use std::collections::HashMap;
 use std::sync::RwLock;
@@ -7,6 +7,7 @@ use std::sync::RwLock;
 pub enum Locale {
     ZhCn,
     EnUs,
+    ViVn,
 }
 
 impl Locale {
@@ -16,6 +17,8 @@ impl Locale {
             Some(Self::ZhCn)
         } else if norm.starts_with("en") {
             Some(Self::EnUs)
+        } else if norm.starts_with("vi") {
+            Some(Self::ViVn)
         } else {
             None
         }
@@ -25,6 +28,7 @@ impl Locale {
         match self {
             Self::ZhCn => "zh-CN",
             Self::EnUs => "en-US",
+            Self::ViVn => "vi-VN",
         }
     }
 }
@@ -51,7 +55,7 @@ impl Translator {
     }
 
     pub fn with_backend_defaults() -> Self {
-        Self::new(Locale::ZhCn)
+        Self::new(Locale::ViVn)
     }
 
     pub fn locale(&self) -> Locale {
