@@ -1,32 +1,39 @@
-## 📋 PR 描述 / Description
+## Mục tiêu
 
-<!-- 简要描述这个 PR 做了什么 / Briefly describe what this PR does -->
+Mô tả vấn đề hoặc mục tiêu mà pull request này giải quyết.
 
-## 🔗 关联 Issue / Related Issue
+## Thay đổi chính
 
-<!-- 关联的 Issue 编号 / Link to related issue -->
-Closes #
+- 
+- 
+- 
 
-## 🔄 改动类型 / Type of Change
+## Cách kiểm tra
 
-- [ ] 🐛 Bug 修复 / Bug fix
-- [ ] ✨ 新功能 / New feature
-- [ ] 💥 破坏性变更 / Breaking change
-- [ ] 📝 文档更新 / Documentation update
-- [ ] 🎨 代码重构 / Refactoring
-- [ ] ⚡ 性能优化 / Performance improvement
+Liệt kê các lệnh và thao tác đã dùng để xác nhận thay đổi.
 
-## ✅ 测试 / Testing
+```bash
+# Ví dụ
+pnpm typecheck
+pnpm test
+cargo test --workspace
+```
 
-- [ ] 已通过现有测试 / Existing tests pass
-- [ ] 已添加新测试 / New tests added
-- [ ] 已在 macOS 测试 / Tested on macOS
-- [ ] 已在 Windows 测试 / Tested on Windows
+## Ảnh hưởng tới người dùng
 
-## 📸 截图（如适用）/ Screenshots (if applicable)
+Mô tả thay đổi về giao diện, dữ liệu, hiệu năng hoặc quy trình làm việc.
 
-<!-- 添加截图展示改动效果 / Add screenshots to show the changes -->
+## i18n và tài liệu
 
-## 📝 补充说明 / Additional Notes
+- [ ] Đã thêm/cập nhật khóa dịch cần thiết.
+- [ ] Đã kiểm tra tiếng Việt.
+- [ ] Đã cập nhật README hoặc tài liệu liên quan.
+- [ ] Không có chuỗi giao diện mới bị hard-code ngoài hệ thống i18n.
 
-<!-- 其他需要审阅者了解的信息 / Anything else reviewers should know -->
+## Danh sách kiểm tra
+
+- [ ] Phạm vi thay đổi rõ ràng, không chứa tệp không liên quan.
+- [ ] Mã đã được format và lint.
+- [ ] Test liên quan đã chạy thành công.
+- [ ] Không commit API Key, thông tin đăng nhập hoặc dữ liệu cá nhân.
+- [ ] Đã ghi rõ giới hạn hoặc việc còn lại.
