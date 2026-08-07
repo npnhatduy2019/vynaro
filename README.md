@@ -2,125 +2,131 @@
 
 <div align="center">
 
-<img src="assets/logo-horizontal.png" width="640" alt="Vynaro 叙影 AI 视频解说创作工具" style="border-radius: 16px; box-shadow: 0 0 32px rgba(245,200,66,0.2);" />
+<img src="assets/logo-horizontal.png" width="640" alt="Vynaro - công cụ AI tạo video kể chuyện và thuyết minh" />
 
-[![Version](https://img.shields.io/badge/Version-v1.0.0-F5C842?style=flat-square&logo=git&logoColor=1A1A20)](https://github.com/Agions/vynaro/releases) [![Tauri](https://img.shields.io/badge/Tauri-v2.0-7C3AED?style=flat-square&logo=tauri&logoColor=white)](https://tauri.app) [![Rust](https://img.shields.io/badge/Rust-1.85%2B-F97316?style=flat-square&logo=rust&logoColor=white)](https://www.rust-lang.org) [![React](https://img.shields.io/badge/React-19.0-06B6D4?style=flat-square&logo=react&logoColor=white)](https://react.dev) [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org) [![License](https://img.shields.io/badge/License-MIT-10B981?style=flat-square&logo=open-source-initiative&logoColor=white)](LICENSE)  
-[![Pipeline](https://img.shields.io/badge/Pipeline-7--Step%20Auto-D97706?style=flat-square&logo=timeline)](https://github.com/Agions/vynaro) [![LLM](https://img.shields.io/badge/LLM-11%20Providers-F5C842?style=flat-square&logo=openai&logoColor=1A1A20)](https://github.com/Agions/vynaro) [![TTS](https://img.shields.io/badge/TTS-Zero--shot%20Clone-22C55E?style=flat-square&logo=microphone)](https://github.com/Agions/vynaro) [![Export](https://img.shields.io/badge/Export-CapCut%20Draft-EC4899?style=flat-square&logo=video)](https://github.com/Agions/vynaro)
+[![Version](https://img.shields.io/badge/Version-v1.0.0-F5C842?style=flat-square)](https://github.com/npnhatduy2019/vynaro/releases)
+[![Tauri](https://img.shields.io/badge/Tauri-v2.0-7C3AED?style=flat-square&logo=tauri&logoColor=white)](https://tauri.app)
+[![Rust](https://img.shields.io/badge/Rust-1.85%2B-F97316?style=flat-square&logo=rust&logoColor=white)](https://www.rust-lang.org)
+[![React](https://img.shields.io/badge/React-19-06B6D4?style=flat-square&logo=react&logoColor=white)](https://react.dev)
+[![License](https://img.shields.io/badge/Giấy%20phép-MIT-10B981?style=flat-square)](LICENSE)
 
-</div>
+**Studio AI trên máy tính dành cho video kể chuyện, thuyết minh phim và nội dung ngắn.**
 
----
-
-## 🎬 核心定位
-
-**Vynaro（叙影）** 是一款基于 **Tauri 2 + Rust + React 19** 深度研发的桌面端 AI 视频叙事与解说编辑器。
-
-专为短剧拆条、电影解说、自媒体故事化创作设计，通过 **7 步卡片智能流水线**，自动完成影视/短剧片段的高完播率成片转化与剪映工程草稿（`.draft`）原生导出。
-
-素材导入 ➔ 智能拆条 ➔ AI 独白脚本 ➔ TTS 配音与克隆 ➔ VAD 字幕对齐 ➔ 音画混流 ➔ 多平台/剪映草稿导出
-
----
-
-## 🖥️ 桌面应用界面展示
-
-<div align="center">
-
-| 首页 Dashboard 概览 | 素材资产管理面板 |
-| :---: | :---: |
-| <img src="assets/vynaro_dashboard_cover.png" width="460" alt="Vynaro 首页 Dashboard 界面截图" style="border-radius: 8px; border: 1px solid #27272A;" /> | <img src="assets/vynaro_assets_cover.png" width="460" alt="Vynaro 素材资产管理界面截图" style="border-radius: 8px; border: 1px solid #27272A;" /> |
-
-| 7 步全自动解说生产工作区 | 11 大模型与 TTS 设置表单 |
-| :---: | :---: |
-| <img src="assets/vynaro_production_cover.png" width="460" alt="Vynaro 7 步解说生产工作区界面截图" style="border-radius: 8px; border: 1px solid #27272A;" /> | <img src="assets/vynaro_settings_cover.png" width="460" alt="Vynaro 模型设置表单界面截图" style="border-radius: 8px; border: 1px solid #27272A;" /> |
+[Trang tài liệu](https://agions.github.io/vynaro/) · [Báo lỗi](https://github.com/npnhatduy2019/vynaro/issues) · [Bản phát hành](https://github.com/npnhatduy2019/vynaro/releases)
 
 </div>
 
 ---
 
-## ⚡ 7 步全自动智能流水线
+## Vynaro là gì?
+
+**Vynaro** là ứng dụng desktop mã nguồn mở được xây dựng bằng **Tauri 2, Rust, React 19 và TypeScript**. Ứng dụng giúp chuyển video gốc thành sản phẩm kể chuyện hoặc thuyết minh hoàn chỉnh thông qua một quy trình trực quan gồm 7 bước.
+
+Vynaro hướng tới người làm nội dung ngắn, kênh thuyết minh phim, biên tập viên video và nhóm sáng tạo cần một quy trình xử lý cục bộ, có thể kiểm soát và dễ mở rộng.
+
+## Quy trình 7 bước
 
 ```mermaid
 graph LR
-    S1["📥 Step 1<br>素材导入"] --> S2["✂️ Step 2<br>智能拆条"]
-    S2 --> S3["🤖 Step 3<br>AI 独白脚本"]
-    S3 --> S4["🎙️ Step 4<br>TTS & 克隆"]
-    S4 --> S5["📝 Step 5<br>VAD 字幕对齐"]
-    S5 --> S6["🎬 Step 6<br>多轨音画混流"]
-    S6 --> S7["📤 Step 7<br>剪映/多平台导出"]
+    S1["1. Nhập tài nguyên"] --> S2["2. Phát hiện cảnh"]
+    S2 --> S3["3. Viết kịch bản AI"]
+    S3 --> S4["4. Tạo giọng đọc"]
+    S4 --> S5["5. Đồng bộ phụ đề"]
+    S5 --> S6["6. Phối hình và tiếng"]
+    S6 --> S7["7. Xuất video / CapCut"]
 ```
 
-| 步骤 | 模块名称 | 核心技术与执行细节 |
-| :--- | :--- | :--- |
-| **Step 1** | **📥 素材导入与预处理** | 本地极速提取音视频流元数据（Resolution / FPS / Codec），自动生成缩略图 |
-| **Step 2** | **✂️ FFmpeg 智能拆条** | 基于 FFmpeg 场景切面探测、情绪峰值吸附与关键帧序列化索引 |
-| **Step 3** | **🤖 AI 第一人称独白** | 支持 Qwen 3.8 / DeepSeek V4 / GPT-5.6 等 11 大 LLM，提供主角独白/影评/吐槽 4 大风格 |
-| **Step 4** | **🎙️ TTS 配音与人声克隆** | Edge-TTS + OpenAI-TTS + GPT-SoVITS 人声克隆，集成实时黄金波形与本地服务探针 |
-| **Step 5** | **📝 VAD 字幕精准对齐** | 基于 FFmpeg `silencedetect` 语音端点检测，自动生成 SRT / VTT / ASS 字幕 |
-| **Step 6** | **🎬 画面-声音智能混流** | 多轨时间轴毫秒级对齐，支持 BGM 背景降噪与音量比例调配 (`amix`) |
-| **Step 7** | **📤 剪映草稿与多平台导出**| 原生导出剪映二次剪辑工程草稿 (`.draft`) 与 1080P 竖屏 (9:16) 成片 |
+| Bước | Chức năng | Kết quả chính |
+| --- | --- | --- |
+| 1 | Nhập video và kiểm tra định dạng | Thông tin codec, FPS, độ phân giải và ảnh thu nhỏ |
+| 2 | Phát hiện chuyển cảnh bằng FFmpeg | Danh sách cảnh và đoạn nổi bật |
+| 3 | Viết lời kể bằng LLM | Kịch bản ngôi thứ nhất hoặc thuyết minh |
+| 4 | Tổng hợp giọng nói TTS | Tệp giọng đọc từ Edge TTS, OpenAI TTS hoặc GPT-SoVITS |
+| 5 | Tạo và căn chỉnh phụ đề | SRT, VTT hoặc ASS theo mốc thời gian |
+| 6 | Phối video, lời đọc và nhạc nền | Timeline nhiều lớp đã đồng bộ |
+| 7 | Xuất thành phẩm | Video theo nền tảng hoặc bản nháp CapCut |
 
----
+## Giao diện
 
-## 🧠 大模型与 TTS 引擎能力矩阵
+<div align="center">
 
-### 11 大主流 LLM 引擎支持
-* 🇨🇳 **通义千问 (Qwen)**: `qwen3.8-max`
-* 🇨🇳 **DeepSeek**: `deepseek-v4-pro` / `deepseek-v4-flash`
-* 🇺🇸 **OpenAI**: `gpt-5.6-sol`
-* 🇺🇸 **Claude**: `claude-sonnet-5`
-* 🇺🇸 **Gemini**: `gemini-3.6-flash` / `gemini-3.1-pro`
-* 🇨🇳 **Kimi (月之暗面)**: `kimi-k3`
-* 🇨🇳 **智谱 GLM**: `glm-5.2`
-* 🇨🇳 **豆包 (Doubao)**: `doubao-seed-2-1-pro`
-* 🇨🇳 **腾讯混元 (Hunyuan)**: `hunyuan-pro`
-* 🏠 **本地模型 (Local)**: Ollama / LMStudio (`llama3.2` / `qwen2.5`)
+| Bảng điều khiển | Trung tâm dự án |
+| :---: | :---: |
+| <img src="assets/vynaro_dashboard_cover.png" width="460" alt="Bảng điều khiển Vynaro" /> | <img src="assets/vynaro_assets_cover.png" width="460" alt="Trung tâm dự án và tài nguyên Vynaro" /> |
 
----
+| Quy trình sản xuất | Cài đặt AI và TTS |
+| :---: | :---: |
+| <img src="assets/vynaro_production_cover.png" width="460" alt="Quy trình sản xuất 7 bước của Vynaro" /> | <img src="assets/vynaro_settings_cover.png" width="460" alt="Cài đặt mô hình AI và giọng đọc" /> |
 
-## 🏛️ 项目架构设计
+</div>
 
-```
+## Công nghệ và khả năng
+
+- **Ứng dụng desktop đa nền tảng:** Tauri 2 + Rust.
+- **Giao diện:** React 19, TypeScript và TanStack Router.
+- **Xử lý video:** FFmpeg, phát hiện cảnh, trộn nhiều luồng âm thanh.
+- **Mô hình AI:** OpenAI, Claude, Gemini, DeepSeek, Qwen, Kimi, GLM, Doubao, Hunyuan và mô hình cục bộ.
+- **Giọng đọc:** Edge TTS, OpenAI TTS và GPT-SoVITS.
+- **Phụ đề:** VAD, SRT, VTT và ASS.
+- **Xuất bản:** video đa tỷ lệ và bản nháp CapCut.
+- **Ngôn ngữ:** tiếng Việt, tiếng Anh và tiếng Trung giản thể.
+
+## Cấu trúc dự án
+
+```text
 vynaro/
-├── src/                  # React 19 + TypeScript 前端应用程序
-├── src-tauri/            # Tauri 2.0 桌面应用程序入口 (Rust)
-├── crates/
-│   ├── vynaro-core       # 核心类型 (AppContext / VynaroError)
-│   ├── vynaro-domain     # 领域模型 (Project / Timeline / MediaFile)
-│   ├── vynaro-detect     # FFmpeg 探针 / 场景切分 / 音画混流
-│   ├── vynaro-script     # 11 大 LLM 客户端与独白脚本引擎
-│   ├── vynaro-voice      # Edge-TTS / OpenAI-TTS / GPT-SoVITS
-│   ├── vynaro-subtitle   # FFmpeg silencedetect VAD 端点检测与字幕生成
-│   ├── vynaro-compose    # 7 步流水线状态机与 DAG 执行器
-│   ├── vynaro-export     # 剪映草稿 (.draft) 生成器与平台预设
-│   ├── vynaro-storage    # 本地 SQLite / JSON 存储
-│   └── vynaro-update     # 应用自动更新引擎
-└── Makefile              # 常用构建与测试指令
+├── src/                  # Giao diện React + TypeScript
+├── src-tauri/            # Ứng dụng desktop Tauri
+├── crates/               # Các mô-đun Rust theo nghiệp vụ
+├── docs/                 # Website tài liệu VitePress
+├── resources/            # Biểu tượng và tài nguyên đóng gói
+└── scripts/              # Công cụ kiểm tra và sinh mã
 ```
 
----
+## Cài đặt môi trường phát triển
 
-## 🛠️ 本地开发环境搭建
+### Yêu cầu
+
+- Node.js 20 trở lên
+- pnpm
+- Rust stable
+- Các thư viện hệ thống theo yêu cầu của Tauri 2
+- FFmpeg trong biến môi trường `PATH`
+
+### Chạy ứng dụng
 
 ```bash
-# 1. 克隆代码仓库
-git clone https://github.com/Agions/vynaro.git
+git clone https://github.com/npnhatduy2019/vynaro.git
 cd vynaro
-
-# 2. 安装前端依赖
 pnpm install
-
-# 3. 启动 Tauri 2 开发桌面端
 pnpm tauri dev
-
-# 4. 类型检查与代码校验
-cargo check --workspace
-npx tsc --noEmit
 ```
 
----
+### Kiểm tra mã nguồn
 
-## 📜 许可证
+```bash
+pnpm typecheck
+pnpm lint
+pnpm test
+cargo check --workspace
+cargo test --workspace
+```
 
-基于 **[MIT License](LICENSE)** 许可协议开源。
+## Tài liệu
 
-© 2026 Agions  · Powered by Tauri 2, Rust & React 19
+- [Cài đặt](docs/guide/installation.md)
+- [Bắt đầu nhanh](docs/guide/quick-start.md)
+- [Làm quen giao diện](docs/guide/interface.md)
+- [Cấu hình AI](docs/guide/ai-configuration.md)
+- [Xuất video](docs/guide/exporting.md)
+- [Khắc phục sự cố](docs/guide/troubleshooting.md)
+
+## Đóng góp
+
+Mọi đóng góp đều được hoan nghênh. Hãy tạo issue để mô tả lỗi hoặc đề xuất, sau đó gửi pull request với phạm vi thay đổi rõ ràng và kết quả kiểm tra tương ứng.
+
+## Giấy phép
+
+Dự án được phát hành theo [MIT License](LICENSE).
+
+> Bản fork này ưu tiên trải nghiệm tiếng Việt và tiếp tục kế thừa giấy phép, kiến trúc cùng ghi nhận tác giả của dự án gốc.
