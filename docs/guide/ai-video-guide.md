@@ -1,28 +1,32 @@
----
-title: AI 工作流详解
-description: Vynaro 从视频素材到第一人称解说成片的 7 步 AI 工作流详解。
----
+# Quy trình tạo video bằng AI
 
-# 🤖 AI 工作流详解
+Vynaro chia công việc thành bảy giai đoạn để người dùng có thể kiểm tra và sửa lỗi trước khi chuyển tiếp.
 
-Vynaro 的 AI 生产流程围绕 **“剧情理解 ➔ 独白脚本 ➔ 黄金声波合成 ➔ 剪映草稿交付”** 闭环设计。每个阶段都有明确的数据产出与质量评估，确保视频解说的完播率与观感。
+## Luồng dữ liệu
 
----
+```text
+Video nguồn
+→ thông tin media và ảnh thu nhỏ
+→ danh sách cảnh
+→ kịch bản
+→ giọng đọc
+→ phụ đề
+→ timeline phối hợp
+→ video hoặc bản nháp CapCut
+```
 
-## ⚡ 7 步卡片流水线架构
+## Nguyên tắc vận hành
 
-<InteractivePipeline />
+- Không chạy bước sau khi đầu ra bước trước chưa được duyệt.
+- Giữ nguyên tệp nguồn trong suốt dự án.
+- Lưu phiên bản kịch bản đã duyệt trước khi tạo giọng đọc.
+- Nghe toàn bộ giọng đọc trước khi đồng bộ phụ đề.
+- Xuất một bản xem thử dung lượng thấp trước bản cuối.
 
----
+## Chất lượng đầu vào
 
-## 🧠 11 大大模型与人声克隆能力矩阵
+Video nguồn ổn định giúp giảm lỗi ở mọi bước sau. Ưu tiên tệp có codec phổ biến, âm thanh rõ, tốc độ khung hình ổn định và không bị hỏng metadata.
 
-<ModelMatrixCard />
+## Vai trò của AI
 
----
-
-## 📖 相关推荐文档
-
-* [界面与功能指南](/guide/interface) — 桌面端软件操作详解
-* [第一人称生产规范](/guide/narration-spec) — 生产标准与完播率 SOP
-* [导出与发布](/guide/exporting) — 多平台规格与预设参数
+AI hỗ trợ phát hiện, gợi ý và tạo bản nháp. Người dùng vẫn cần kiểm duyệt nội dung, bản quyền, độ chính xác và sự phù hợp với nền tảng phát hành.
