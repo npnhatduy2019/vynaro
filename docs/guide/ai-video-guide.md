@@ -43,6 +43,6 @@ AI hỗ trợ phát hiện, gợi ý và tạo bản nháp. Người dùng vẫn
 
 ## Đọc tiếp
 
-- [Bắt đầu nhanh](./quick-start.md)
-- [Tiêu chuẩn thuyết minh](./narration-spec.md)
-- [Xuất video và phát hành](./exporting.md)
+- [Bắt đầu nhanh](./quick-start)
+- [Tiêu chuẩn thuyết minh](./narration-spec)
+- [Xuất video và phát hành](./exporting)
